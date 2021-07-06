@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>商品列表页面</title>
+</head>
+<body>
+
+    <div>
+        <!--路由传值  controller/action/paramrs -->
+        <!--问号传值  controller/action/path?field1=value1?field2=value2-->
+        <!--表单传值  form get & post-->
+        <!--路由传值   -->
+
+        <ul>
+            <li><a href="PDFromRoute">iphone 4购买链接 路由没有值</a></li>
+            <li><a href="PDFromRoute/10001">iphone 6s购买链接 路由传值 /10001</a></li>
+            <li><a href="PDFromQuery?productId=10002">iphone XS购买链接 问号传值 productId=10002</a></li>
+            <li><a href="PDFromQuery?productTypeId=10003">iphone 11购买链接 问号传值 productTypeId=10003</a></li>
+            <li><a href="PDFromQuery?productTypeId=10003&productId=10004">iphone 11购买链接 productId=10002&productTypeId=10003</a></li>
+            <!--点击以后会去根据路径找到对应的页面-->
+            <!--如果是当前的文件夹下，（例如ProductList和ProductDetail是同一个文件夹下），直接拼接路由参数-->
+        </ul>
+
+        <hr />
+
+        <br />
+        <!--form的action的值就跟a的href一样就好了-->
+        <form action="PDFromForm" method="get">
+            表单传值 get： <input type="text" name="productId" placeholder="请输入商品id" />
+        </form>
+
+        <hr />
+
+        <br />
+        <form action="PDFromForm" method="post">
+            表单传值 post：<input type="text" name="productId" placeholder="请输入商品id" />
+        </form>
+    </div>
+</body>
+</html>

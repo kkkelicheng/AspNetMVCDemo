@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户注册</title>
+    <link href="~/Content/css/registerCSS.css" type="text/css" rel="stylesheet" />
+    <script src="~/Content/3rd/My97DatePicker/WdatePicker.js"></script> <!--部署的时候是在服务器上，~就是服务器上的根目录-->
+    <script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript" ></script>
+    <script src="~/Content/js/RegisterJS.js" type="text/javascript"></script>
+</head>
+<body>
+    <form action="Register" method="post">
+        <table>
+            <tr>
+                <td>账号：</td>
+                <td><input type="text" name="Account" id="Account" /></td>
+                <td id="op_account"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="Pwd" id="Pwd" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>昵称：</td>
+                <td><input type="text" name="NickName" id="NickName" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>出生日期：</td>
+                <td><input class="Wdate" name="Birthday" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd'})"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <label for="Sex0">男：</label><input type="radio" name="Sex" id="Sex0" value="true" />
+                    <label for="Sex1">女：</label><input type="radio" name="Sex" id="Sex1" value="false" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>爱好：</td>
+                <td align="left">
+                    <input type="checkbox" value="羽毛球" name="Hobby" />羽毛球<br />
+                    <input type="checkbox" value="足球" name="Hobby" />足球<br />
+                    <input type="checkbox" value="篮球" name="Hobby" />篮球<br />
+                    <input type="checkbox" value="乒乓球" name="Hobby" />乒乓球
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>备注：</td>
+                <td><textarea rows="2" name="Remark" cols="20"> </textarea></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input id="btnSubmit" type="submit" name="submit" value="确定后提交"/></td>
+            </tr>
+        </table>
+    </form>
+    <div> 
+    </div>
+</body>
+</html>
