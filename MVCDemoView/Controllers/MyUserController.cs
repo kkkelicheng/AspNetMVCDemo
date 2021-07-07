@@ -37,10 +37,17 @@ namespace MVCDemoView.Controllers
                     Account = "klc",
                     NickName = "niubi"
                 };
+                //这里还可以做一些其他的事情
+                //HttpCookie cookie = new HttpCookie("userString");
+                //cookie.Expires = DateTime.Now.AddMinutes(3);
+                //Response.Cookies.Add(cookie);
 
+                return View("../Home/index");
             }
-
-            return View("../Home/index");
+            else {
+                return View("UserLogin");
+            }
+            
 
         }
 
